@@ -23,18 +23,63 @@
   <h1 class="mt-5">Tournois Divers</h1>
   <p class="lead">Participe aux qualifications en ligne, viens disputer les (demi-)finales IRL !</p>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Informations générales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#regles">Règles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#brackets">Arbre de participation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reporting">Autodéclaration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">Foire Aux Questions</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Anciennes éditions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="sanic-2022.html">Sanic</a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <hr/>
+
   <div class="row justify-content-center">
     <div class="col-lg-6 col-md-12 text-center">
       <h2>Tournoi : Sanicball</h2>
       <img src="./assets/img/sanicball.png"/>
+      <p>Inscriptions :<br/><strong>Du 27 Novembre à 21h00 au 28 Novembre à 12h00</strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
       <p>Qualifications en ligne, premier tour :<br/><strong>Du 28 Novembre à 12h00 au 30 Novembre à 12h00</strong></p>
       <p>Qualifications en ligne, second tour :<br/><strong>Du 30 Novembre à 18h00 au 02 Décembre à 18h00</strong></p>
       <p>Demi-finales et finales en présentiel :<br/><strong>Samedi 03 Décembre à 18h00 en BC129</strong></p>
     </div>
   </div>
 
+  <hr/>
+
   <div class="row justify-content-center">
 
+    <a id="regles"></a>
     <div class="col-lg-6 col-md-6">
       <h2>Règles générales</h2>
       <p>
@@ -74,8 +119,11 @@
 
   </div>
 
+  <hr/>
+
   <div class="row">
     <div class="col-12">
+      <a id="brackets"></a>
       <h2>Arbre de participation</h2>
       <iframe
         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQTM_hpV9V86dU-c3uIVICrZtoBfxplmvSUlMPZEAwPccKlYVhuZfpGFO7oZRXgZIJT2UgjRx7DBsA_/pubhtml?gid=1375329318&amp;single=true&amp;widget=true&amp;headers=false"
@@ -83,9 +131,12 @@
     </div>
   </div>
 
+  <hr/>
+
   <div class="row">
     <div class="col-12">
-      <h2>Self-reporting</h2>
+      <a id="reporting"></a>
+      <h2>Autodéclaration</h2>
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLScGvwllL7WaV-tBZWzifRn9bAtgURXUKX2wxIDRWo0fHoazGg/viewform?embedded=true"
         width="100%" height="1027px" frameborder="0" marginheight="0" marginwidth="0">Chargement…
@@ -93,9 +144,13 @@
     </div>
   </div>
 
+  <hr/>
+
   <div class="row">
     <div class="col-12">
+      <a id="faq"></a>
       <h2>Foire Aux Questions</h2>
+      <h3>Généralités</h3>
       <dl class="row">
 
         <dt class="col-sm-3">Que peut-on obtenir comme information ?</dt>
@@ -129,5 +184,8 @@
                                 target="_blank">GitHub</a></span>
   </div>
 </footer>
+
+<script src="./assets/js/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
 </body>
 </html>
