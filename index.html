@@ -47,15 +47,8 @@
         <li class="nav-item">
           <a class="nav-link" href="#faq">Foire Aux Questions</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-             aria-haspopup="true" aria-expanded="false">
-            Anciennes éditions
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="sanic-2022.html">Sanic 2022</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="./old">Anciennes éditions</a>
         </li>
       </ul>
 
@@ -68,10 +61,11 @@
     <div class="col-lg-6 col-md-12 text-center">
       <h2>Tournoi : Sanicball</h2>
       <img src="./assets/img/sanicball.png"/>
+      <div id="timer">Modifier tout en bas pour changer le timer !</div>
       <p>Inscriptions :<br/><strong>Du 27 Novembre à 21h00 au 28 Novembre à 12h00</strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
-      <p>Qualifications en ligne, premier tour :<br/><strong>Du 28 Novembre à 12h00 au 30 Novembre à 12h00</strong></p>
-      <p>Qualifications en ligne, second tour :<br/><strong>Du 30 Novembre à 18h00 au 02 Décembre à 18h00</strong></p>
-      <p>Demi-finales et finales en présentiel :<br/><strong>Samedi 03 Décembre à 18h00 en BC129</strong></p>
+      <p>Qualifications en ligne, premier tour :<br/><strong>Du 28 Novembre à 12h00 au 03 Décembre à 12h00</strong></p>
+      <p>Qualifications en ligne, second tour :<br/><strong>Du 05 Décembre à 12h00 au 10 Décembre à 12h00</strong></p>
+      <p>Demi-finales et finales en présentiel :<br/><strong>Dimanche 11 Décembre à 03h00 en BC</strong></p>
     </div>
   </div>
 
@@ -200,7 +194,6 @@
       </dl>
     </div>
   </div>
-
 </main>
 
 <footer class="footer">
@@ -212,5 +205,43 @@
 
 <script src="./assets/js/jquery-1.12.4.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
+
+<script>
+var endDateBase = new Date("2022-12-10 12:00:00");
+var reason = "Second tour";
+
+var endDate = endDateBase.getTime();
+
+var timer = setInterval(function() {
+
+    let now = new Date().getTime();
+    let t = endDate - now;
+
+    if (t >= 0) {
+
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        let secs = Math.floor((t % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = "<h3>Temps restant pour "
+         + "<strong>" + reason + "</strong>" + " : "
+         + days + "<span class='label'>jour(s) </span>"
+         + ("0"+hours).slice(-2) + "<span class='label'>h </span>"
+         + ("0"+mins).slice(-2) + "<span class='label'>min </span>"
+         + ("0"+secs).slice(-2) + "<span class='label'>sec</span>"
+         + "</h3>";
+
+    } else {
+
+
+        document.getElementById("timer").innerHTML = "<h3>Temps restant pour "
+         + "<strong>" + reason + "</strong>" + " : Temps écoulé !";
+
+    }
+
+}, 1000);
+</script>
+
 </body>
 </html>
