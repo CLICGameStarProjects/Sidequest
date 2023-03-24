@@ -1,5 +1,5 @@
-# Tournois-Divers
-Site hébergeant les Tournois Divers, des petits tournois locaux ayant lieu ponctuellement
+# Sidequest
+Site hébergeant les Sidequests, des petits tournois locaux ayant lieu ponctuellement
 
 ## How-To
 Note : les modifications se font automatiquement sur le site Internet lorsque le commit est push.
