@@ -63,9 +63,9 @@
       <h2>Tournoi : FPS Chess</h2>
       <img src="./assets/img/fpschess.jpg"/>
       <div id="timer">Modifier tout en bas pour changer le timer !</div>
-      <p>Inscriptions :<br/><strong>Du 18 Mars au 19 Mars à 23h59 </strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
-      <p>Qualifications en ligne : <br/><strong>Du 20 Mars à 00h00 au 30 Mars à 23h59</strong></p>
-      <p>Demi-finales et finales en présentiel :<br/><strong>Vendredi 31 Mars à 17h00 en BC01</strong></p>
+      <p>Inscriptions :<br/><strong>Du 2 Avril au 5 Avril à 23h59 </strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
+      <p>Qualifications en ligne : <br/><strong>Du 6 Avril à 00h00 au 20 Avril à 23h59</strong></p>
+      <p>Demi-finales et finales en présentiel :<br/><strong>Vendredi 21 Mars à 18h30 en BC01</strong></p>
     </div>
   </div>
 
@@ -194,7 +194,7 @@
 
 <script>
 <!-- Information du tour en cours -->
-var endDateBase = new Date("2023-03-31 17:00:00");
+var endDateBase = new Date("2023-04-21 18:30:00");
 var reason = "Présentiel";
 
 var endDate = endDateBase.getTime();
@@ -212,8 +212,8 @@ var timer = setInterval(function() {
         let secs = Math.floor((t % (1000 * 60)) / 1000);
 
         document.getElementById("timer").innerHTML = "<h3>Temps restant avant "
-         + "<strong>" + reason + "</strong>" + " : "
-         + days + "<span class='label'>jour(s) </span>"
+         + "<strong>" + reason + "</strong>" + " : <br> "
+         + days + "<span class='label'> jour(s) </span>"
          + ("0"+hours).slice(-2) + "<span class='label'>h </span>"
          + ("0"+mins).slice(-2) + "<span class='label'>min </span>"
          + ("0"+secs).slice(-2) + "<span class='label'>sec</span>"
