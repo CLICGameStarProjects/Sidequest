@@ -12,6 +12,9 @@
   <!-- Bootstrap core CSS -->
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
   <!-- Custom styles for this template -->
   <link href="./assets/css/sticky-footer.css" rel="stylesheet">
 </head>
@@ -51,7 +54,6 @@
           <a class="nav-link" href="old/sanic-2022.html">Anciennes éditions</a>
         </li>
       </ul>
-
     </div>
   </nav>
 
@@ -61,7 +63,7 @@
   <div class="row justify-content-center">
     <div class="col-lg-6 col-md-12 text-center">
       <h2>Tournoi : Brawlhalla </h2>
-      <img src="./assets/img/brawlhalla.webp" width="400" height="292"/>
+      <img class="mw-100" src="./assets/img/brawlhalla.webp" width="400"/>
       <div id="timer">Modifier tout en bas pour changer le timer !</div>
       <p>Inscriptions :<br/><strong>Du 25 Octobre au 1 Novembre à 23h59 </strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
       <p>Qualifications en ligne : <br/><strong>Du 2 Novembre à 00h00 au 23 Novembre à 23h59</strong></p>
@@ -77,43 +79,35 @@
     <a id="regles"></a>
     <div class="col-lg-6 col-md-6">
       <h2>Règles générales</h2>
-      <p>
-      <ul>
-        <li>Les rencontres sont gérées par les joueur·euse·s.</li>
-        <li>À la fin de chaque rencontre, veuillez reporter l'issue de la partie sur le formulaire ci-dessous.</li>
-        <li>En cas de litige, si aucune preuve n'est apportée (e.g., une capture d'écran), les deux joueur·euse·s seront
-          éliminé·e·s.
-        </li>
-        <li>En cas de non-respect du délai imposé pour un match, le vainqueur sera désigné par tirage au sort afin de ne pas pénaliser les autres participant·e·s.
-      </ul>
-      </p>
+        <ul>
+          <li>Les rencontres sont gérées par les joueur·euse·s.</li>
+          <li>À la fin de chaque rencontre, veuillez reporter l'issue de la partie sur le formulaire ci-dessous.</li>
+          <li>En cas de litige, si aucune preuve n'est apportée (e.g., une capture d'écran), les deux joueur·euse·s seront
+            éliminé·e·s.
+          </li>
+          <li>En cas de non-respect du délai imposé pour un match, le vainqueur sera désigné par tirage au sort afin de ne pas pénaliser les autres participant·e·s.</li>
+        </ul>
     </div>
 
     <div class="col-lg-6 col-md-6">
       <h2>Terminologie</h2>
-      <p>
       <ul>
         <li>Un "jeu" est défini comme l'instance de combat dont l'issue est déterminée par la perte de toutes les vies d'un·e joueur·euse.</li>
         <li>Un "set" est défini comme le meilleur des trois (Best-of-3) ou le meilleur des cinq jeux (Best-of-5) qui est joué jusqu'à ce qu'un·e joueur·euse ait gagné la majorité du set. (Les sets multiples ne sont joués que dans le cas où le·la joueur·euse de l'arbre inférieur remporte un set lors de la grande finale).</li>
         <li>Un "match" est défini comme le set ou l'ensemble de sets dans lequel un·e joueur·euse a officiellement perdu et le·la joueur·euse gagnant·e se qualifie pour le tour suivant du tournoi.</li>
       </ul>
-      </p>
     </div>
 
-    <div class="row">
-      <div>
+    <div class="col-12">
         <h2>Règles spécifiques au jeu</h2>
-        <p>
         <ul>
-        <li>Les matches se jouent en 1 contre 1, sur des cartes aléatoires parmi le type autorisé (voir paramètres ci-dessous).</li>
-        <li>La finale des vainqueurs, la finale des perdants et la grande finale se jouent en 3 jeux gagnants (Best-of-5) ; Tous les autres matches se jouent en 2 jeux gagnants (Best-of-3).</li>
-        <li>Toutes les légendes sont autorisées, et les joueur·euse·s peuvent changer de légende entre chaque jeu.</li>
+          <li>Les matches se jouent en 1 contre 1, sur des cartes aléatoires parmi le type autorisé (voir paramètres ci-dessous).</li>
+          <li>La finale des vainqueurs, la finale des perdants et la grande finale se jouent en 3 jeux gagnants (Best-of-5) ; Tous les autres matches se jouent en 2 jeux gagnants (Best-of-3).</li>
+          <li>Toutes les légendes sont autorisées, et les joueur·euse·s peuvent changer de légende entre chaque jeu.</li>
         </ul>
-        </p>
      
       <h5>Paramètres de jeu</h5>
-      <p>
-        Chaque partie doit être créée avec les règles de jeu suivantes : <br/>
+      <p>Chaque partie doit être créée avec les règles de jeu suivantes :</p>
         <ul>
           <li>Mode de jeu : Stocks</li>
           <li>Équipes : Désactivé</li>
@@ -127,19 +121,8 @@
           <li>Nbr joueurs max. : 2</li>
           
         </ul>
-        </p>
-      </div>
     </div>
-
-      
-    
-
-
-
   </div>
-
-  <hr/>
-
 
   <hr/>
 
@@ -148,9 +131,9 @@
     <div class="col-12">
       <a id="brackets"></a>
       <h2>Arbre de participation</h2>
-      <iframe
+      <iframe class="w-100 border-0"
       src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQTM_hpV9V86dU-c3uIVICrZtoBfxplmvSUlMPZEAwPccKlYVhuZfpGFO7oZRXgZIJT2UgjRx7DBsA_/pubhtml?gid=725806726&amp;single=true&amp;widget=true&amp;headers=false"
-        width="100%" height="512px"></iframe>
+      height="512px"></iframe>
     </div>
   </div>
 
@@ -160,9 +143,9 @@
     <div class="col-12">
       <a id="reporting"></a>
       <h2>Autodéclaration</h2>
-      <iframe
+      <iframe class="w-100 m-0 border-0"
         src="https://docs.google.com/forms/d/e/1FAIpQLScGvwllL7WaV-tBZWzifRn9bAtgURXUKX2wxIDRWo0fHoazGg/viewform?embedded=true"
-        width="100%" height="1027px" frameborder="0" marginheight="0" marginwidth="0">Chargement…
+        height="1027px" marginheight="0" marginwidth="0">Chargement…
       </iframe>
     </div>
   </div>
@@ -209,11 +192,59 @@
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <span class="text-muted"><a href="https://github.com/CLICGameStarProjects/Tournois-Divers"
-                                target="_blank">GitHub</a></span>
-  </div>
+
+
+<footer>
+  <section class="my-3 mw-100 d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <a class="text-dark" href="http://sibyll.in/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-link fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://discord.gg/8tVCZJG" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fab fa-discord fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://t.me/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-telegram-plane fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://twitter.com/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-twitter fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://instagram.com/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-instagram fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://twitch.tv/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-twitch fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://youtube.com/channel/UCXFwVqbBNf4wO3d5CmW3uBg" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-youtube fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="mailto:gamestar.clic@epfl.ch" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fas fa-envelope fa-stack-1x fa-inverse fa-fw"></i>
+    </span>
+  </a>
+</section>
 </footer>
 
 <script src="./assets/js/jquery-1.12.4.min.js"></script>
@@ -250,7 +281,7 @@ var timer = setInterval(function() {
 
 
         document.getElementById("timer").innerHTML = "<h3>Temps restant avant "
-         + "<strong>" + reason + "</strong>" + " : Temps écoulé !";
+         + "<strong>" + reason + "</strong>" + " : Temps écoulé !" + "</h3>";
 
     }
 
