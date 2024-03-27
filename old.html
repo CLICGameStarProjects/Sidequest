@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="./assets/img/favicons/favicon.ico">
+
+  <title>Simple Page</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="./assets/css/sticky-footer.css" rel="stylesheet">
+</head>
+
+<body>
+
+<main role="main" class="container">
+  <h1 class="mt-5">Anciennes éditions</h1>
+  <p>Choisissez une page :</p>
+  <select class="custom-select" id="pageSelect">
+    <!-- Les options seront générées par JavaScript -->
+  </select>
+</main>
+
+<footer>
+  <!-- Pied de page similaire à la page originale si nécessaire -->
+</footer>
+
+<script src="./assets/js/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script>
+    
+document.addEventListener('DOMContentLoaded', function() {
+  var select = document.getElementById('pageSelect');
+  var pages = ['sanic-2022.html', 'FPS-Chess-2023.html', 'Brawlhalla-2023.html']; // Exemple de noms de fichier
+  pages.forEach(function(page) {
+    var option = new Option(page, page);
+    select.appendChild(option);
+  });
+  
+  // Ajouter un écouteur d'événements pour la redirection
+  select.addEventListener('change', function() {
+    window.location.href = './old/' + this.value;
+  });
+});
+</script>
+
+</body>
+</html>
