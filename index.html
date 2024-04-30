@@ -65,6 +65,7 @@
       <h2>Tournoi : Brawl Stars </h2>
       <img class="mw-100" src="./assets/img/brawl_stars.png" width="400"/>
       <div id="timer">Modifier tout en bas pour changer le timer !</div>
+      <div id="game-modes">Modifier tout en bas aussi</div>
       <p>Inscriptions :<br/><strong>Du 17 avril au 25 avril à 23h59 </strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
       <p>Qualifications en ligne : <br/><strong>Du 26 avril à 00h00 au 23 mai à 23h59</strong></p>
       <p>Demi-finales et finales en présentiel :<br/><strong>Vendredi 24 mai à 18h30 en BC01</strong></p>
@@ -118,8 +119,9 @@
         <li>Pour chaque mode de jeu, nous proposons 3 cartes différentes (voir ci-après). Au cours d'un jeu, chaque équipe peut bannir une carte parmi les 3 proposées. L'affrontement aura lieu sur la carte restante. </li>
         <li>Les modificateurs de cartes seront désactivés pour l'ensemble du tournoi.</li>
       </ul>
+    </div>
 
-      </p>
+      <div class="col-lg-6 col-md-6">
       <h5> Cartes par mode de jeu :</h5>
         <ul>
           <li>Razzia de gemmes : Arcade rustique, Dernier arrêt, Mine hard-rock</li>
@@ -128,8 +130,21 @@
           <li>Brawlball : Milieu de scène, Super plage, Rêverie de gardien</li>
           <li>Zone réservée  : Cercle de feu, Duel de scarabées, Stratégies parallèles</li>
           <li>Hors-jeu : Rocher de la belle, Nouveaux horizons, À découvert</li>
-        
         </ul>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+        <h5> Modes de jeu par tour de la ronde Suisse :</h5>
+        <ol>
+          <li>Prime, Brawlball, Razzia de gemmes</li>
+          <li>Brawlball, Razzia de gemmes, Hors-jeu</li>
+          <li>Razzia de gemmes, Prime, Zone réservée</li>
+          <li>Braquage, Brawlball, Hors-jeu</li>
+          <li>Zone réservée, Braquage, Prime</li>
+          <li>Braquage, Prime, Brawlball</li>
+          <li>Hors-jeu, Zone réservée, Braquage</li>
+          <li>Razzia de gemmes, Hors-jeu, Zone réservée</li>
+        </ol>
     </div>
   </div>
 
@@ -146,6 +161,16 @@
   </div>
 
   <hr/>
+
+  <!-- Liste des équipes -->
+  <div class="row">
+    <div class="col-12">
+      <a id="equipes"></a>
+      <iframe width="1024px" height="512px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR1phWI3wG82TFacf6At6DipAlSFRWNYK_KKSwUiNI5HlnTEjxWxXrzt76QD5lg_TlkWYCYYaLuSQFi/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+  </div>
+
+  <!-- Autodéclaration -->
 
   <div class="row">
     <div class="col-12">
@@ -267,15 +292,39 @@
 
 <script>
 <!-- Information du tour en cours -->
+
 var endDateBase = new Date("2024-05-24 18:30:00");
-var reason = "Présentiel";
+var end1 = new Date("2024-05-03 00:00:00");
+var end2 = new Date("2024-05-06 00:00:00");
+var end3 = new Date("2024-05-09 00:00:00");
+var end4 = new Date("2024-05-12 00:00:00");
+var end5 = new Date("2024-05-15 00:00:00");
+var end6 = new Date("2024-05-18 00:00:00");
+var end7 = new Date("2024-05-21 00:00:00");
+var end8 = new Date("2024-05-24 00:00:00");
 
 var endDate = endDateBase.getTime();
+
+var ends = [end1.getTime(), end2.getTime(), end3.getTime(), end4.getTime(), end5.getTime(), end6.getTime(), end7.getTime(), end8.getTime(), endDate];
+
+var reasons = []
+for (var i = 1; i <= 8; i++) {
+  reasons.push("Fin du tour " + i);
+}
+reasons.push("Présentiel");
+
+var gameModes = ["Prime, Brawlball, Razzia de gemmes", "Brawlball, Razzia de gemmes, Hors-jeu", "Razzia de gemmes, Prime, Zone réservée", "Braquage, Brawlball, Hors-jeu", "Zone réservée, Braquage, Prime", "Braquage, Prime, Brawlball", "Hors-jeu, Zone réservée, Braquage", "Razzia de gemmes, Hors-jeu, Zone réservée", "Finale"];
+
 
 var timer = setInterval(function() {
 
     let now = new Date().getTime();
-    let t = endDate - now;
+    //Find first date in ends that is after now
+    var i = 0;
+    while (i < 8 && ends[i] < now) {
+      i++;
+    }
+    let t = ends[i] - now;
 
     if (t >= 0) {
 
@@ -285,18 +334,20 @@ var timer = setInterval(function() {
         let secs = Math.floor((t % (1000 * 60)) / 1000);
 
         document.getElementById("timer").innerHTML = "<h3>Temps restant avant "
-         + "<strong>" + reason + "</strong>" + " : <br> "
+         + "<strong>" + reasons[i] + "</strong>" + " : <br> "
          + days + "<span class='label'> jour(s) </span>"
          + ("0"+hours).slice(-2) + "<span class='label'>h </span>"
          + ("0"+mins).slice(-2) + "<span class='label'>min </span>"
          + ("0"+secs).slice(-2) + "<span class='label'>sec</span>"
          + "</h3>";
 
+        document.getElementById("game-modes").innerHTML = "<h3>Modes de jeu pour le tour " + (i+1) + " : </br>" + gameModes[i] + "</h3>";
+
     } else {
 
 
         document.getElementById("timer").innerHTML = "<h3>Temps restant avant "
-         + "<strong>" + reason + "</strong>" + " : Temps écoulé !" + "</h3>";
+         + "<strong>" + reasons[i] + "</strong>" + " : Temps écoulé !" + "</h3>";
 
     }
 
