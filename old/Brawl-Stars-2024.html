@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../assets/img/favicons/favicon.ico">
+
+  <title>Sidequest</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="../assets/css/sticky-footer.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Begin page content -->
+<main role="main" class="container">
+  <h1 class="mt-5">Sidequest</h1>
+  <p class="lead">Participe aux qualifications en ligne, viens disputer les (demi-)finales IRL !</p>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Informations générales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#regles">Règles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#brackets">Arbre de participation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reporting">Autodéclaration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">Foire Aux Questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../old">Anciennes éditions</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <hr/>
+
+  <!-- Informations générales -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-12 text-center">
+      <h2>Tournoi : Brawl Stars </h2>
+      <img class="mw-100" src="../assets/img/brawl_stars.png" width="400"/>
+      <div id="timer">Modifier tout en bas pour changer le timer !</div>
+      <div id="game-modes">Modifier tout en bas aussi</div>
+      <p>Inscriptions :<br/><strong>Du 17 avril au 30 avril à 19h00 </strong><br/>(Envoie un message à <a href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
+      <p>Qualifications en ligne : <br/><strong>Du 30 avril à 22h00 au 23 mai à 23h59</strong></p>
+      <p>Demi-finales et finales en présentiel :<br/><strong>Vendredi 24 mai à 18h30 en BC01</strong></p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- Règles -->
+  <div class="row justify-content-center">
+
+    <a id="regles"></a>
+    <div class="col-lg-6 col-md-6">
+      <h2>Règles générales</h2>
+        <ul>
+          <li>Les rencontres sont gérées par les joueur·euse·s.</li>
+          <li>À la fin de chaque rencontre, veuillez reporter l'issue de la partie sur le formulaire ci-dessous.</li>
+          <li>En cas de litige, si aucune preuve n'est apportée (e.g., une capture d'écran), les deux équipes seront
+            marquées comme perdantes.
+          </li>
+          <li>En cas de non-respect du délai imposé pour un match, l'équipe indisponible sera considéré comme perdante. Si les deux équipes sont indisponibles, le vainqueur désigné par tirage au sort afin de ne pas pénaliser les autres participant·e·s.</li>
+        </ul>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+      <h2>Terminologie</h2>
+      <ul>
+        <li>Une "manche" est la plus petite unité d'affrontement possible. Elle se compose d'un affrontement entre deux équipes sur un mode de jeu donné.</li>
+        <li>Un "jeu" est défini comme un ensemble de manches sur un mode de jeu donné. Il se joue en 2 manches gagnantes, soit un maximum de 3 manches (Best-of-3), à l'exception du mode Hors-jeu où un jeu ne comporte qu'une seule manche.</li>
+        <li>Au cours d'un jeu, les équipes doivent garder la même composition, et les manches se déroulent toutes sur la même carte.</li>
+        <li>Un "match" est défini comme le meilleur des trois (Best-of-3) ou le meilleur des cinq jeux (Best-of-5) qui est joué jusqu'à ce qu'une équipe ait gagné la majorité du match.</li>
+        <li>Lors de la grande finale, si l'équipe de l'arbre inférieur remporte le BO5, un nouveau match aura lieu pour déterminer le vainqueur du tournoi (bracket reset).</li>
+      </ul>
+      <p>Pour résumer, un match est un BO3 (ou BO5) de 3 ou 5 modes de jeux différents, eux-mêmes composés d'un BO3 sur un même mode de jeu et une même carte.</p>
+    </div>
+
+
+
+    <div class="col-12">
+        <h2>Règles spécifiques au jeu</h2>
+        <ul> 
+          <li>Le tournoi se déroule en deux phases : Une phase de poule en ronde suisse, puis un arbre à double élimination pour les 4 meilleures équipes de la poule, cette phase se déroulant en présentiel.</li>
+          <li>Les matches des poules ainsi que les demi-finales se déroulent en un set de 3 jeux maximum (BO3), chaque jeu se déroulant sur mode de jeu différent, et défini pour chaque tour de la phase de poule. </li>
+          <li>La petite et la grande finale se déroulent quand à elles en sets de 5 jeux maximum (BO5).</li>
+          <li>Tous les Brawlers sont autorisés à l'exception de Lily.</li>
+        </ul>
+
+        <h4>Paramètres de jeu</h4>
+      <ul>
+        <li>Les modes de jeu proposés au cours du tournoi sont les suivants : Razzia de gemmes, Braquage, Prime, Brawlball, Zone réservée et Hors-jeu. </li>
+        <li>Pour chaque mode de jeu, nous proposons 3 cartes différentes (voir ci-après). Au cours d'un jeu, chaque équipe peut bannir une carte parmi les 3 proposées. L'affrontement aura lieu sur la carte restante. </li>
+        <li>Les modificateurs de cartes seront désactivés pour l'ensemble du tournoi.</li>
+      </ul>
+    </div>
+
+      <div class="col-lg-6 col-md-6">
+      <h5> Cartes par mode de jeu :</h5>
+        <ul>
+          <li>Razzia de gemmes : Arcade rustique, Dernier arrêt, Mine hard-rock</li>
+          <li>Braquage : Zone sécurisée, C'est chaud patate, Canyon boum-boum</li>
+          <li>Prime : Cachette secrète, Étoile filante, Haut en couleur</li>
+          <li>Brawlball : Milieu de scène, Super plage, Rêverie de gardien</li>
+          <li>Zone réservée  : Cercle de feu, Duel de scarabées, Stratégies parallèles</li>
+          <li>Hors-jeu : Rocher de la belle, Nouveaux horizons, À découvert</li>
+        </ul>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+        <h5> Modes de jeu par tour de la ronde Suisse :</h5>
+        <ol>
+          <li>Prime, Brawlball, Razzia de gemmes</li>
+          <li>Brawlball, Razzia de gemmes, Hors-jeu</li>
+          <li>Razzia de gemmes, Prime, Zone réservée</li>
+          <li>Braquage, Brawlball, Hors-jeu</li>
+          <li>Zone réservée, Braquage, Prime</li>
+          <li>Braquage, Prime, Brawlball</li>
+          <li>Hors-jeu, Zone réservée, Braquage</li>
+          <li>Razzia de gemmes, Hors-jeu, Zone réservée</li>
+        </ol>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- Arbre de participation -->
+  <div class="row">
+    <div class="col-12">
+      <a id="brackets"></a>
+      <h2>Arbre de participation</h2>
+      <iframe class="w-100 border-0"
+      src="https://challonge.com/fr/sidequest_brawl_stars/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- Liste des équipes -->
+  <div class="row">
+    <div class="col-12">
+      <a id="equipes"></a>
+      <iframe width="100%" height="512px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR1phWI3wG82TFacf6At6DipAlSFRWNYK_KKSwUiNI5HlnTEjxWxXrzt76QD5lg_TlkWYCYYaLuSQFi/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+  </div>
+
+  <!-- Autodéclaration -->
+
+  <div class="row">
+    <div class="col-12">
+      <a id="reporting"></a>
+      <h2>Autodéclaration</h2>
+      <iframe class="w-100 m-0 border-0"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScGvwllL7WaV-tBZWzifRn9bAtgURXUKX2wxIDRWo0fHoazGg/viewform?embedded=true"
+        height="1070px" marginheight="0" marginwidth="0">Chargement…
+      </iframe>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- Foire Aux Questions -->
+  <div class="row">
+    <div class="col-12">
+      <a id="faq"></a>
+      <h2>Foire Aux Questions</h2>
+
+      <h3>Générales</h3>
+      <dl class="row">
+
+        <dt class="col-sm-3">Puis-je obtenir une extension de délai pour mon match ?</dt>
+        <dd class="col-sm-9">
+          <p>
+            Il est préférable de respecter les délais, mais s'il vous est impossible de disputer votre rencontre vous pouvez contacter @LaClimSx sur Telegram.
+          </p>
+        </dd>
+        
+        <dt class="col-sm-3">Comment faire si mon adversaire conteste ma victoire ?</dt>
+        <dd class="col-sm-9">
+          <p>
+            Comme mentionné dans les règles, en cas de conflit, si aucun·e joueur·euse ne peut apporter de preuve de sa version, les deux joueur·euse·s seront éliminé·e·s. Nous vous conseillons donc de prendre une capture d'écran du résultat pour prévenir ce problème.
+          </p>
+        </dd>
+
+      </dl>
+
+      <h3>Spécifiques au jeu</h3>
+      <dl class="row">
+
+        <dt class="col-sm-3">Y aura-t-il des bannissements de Brawlers au début des matches ?</dt>
+        <dd class="col-sm-9">
+          <p>
+            Il n'y en aura pas pour la phase de poule, mais pour les demi-finales et finales, chaque équipe pourra bannir 3 Brawlers pour chaque jeu (plus d'informations sur le bannissement seront données d'ici là).
+          </p>
+        </dd>
+
+        <dt class="col-sm-3">Pourrons-nous jouer avec les Brawlers que nous n'avons pas débloqués ?</dt>
+        <dd class="col-sm-9">
+          <p>
+            Le jeu ne permettant pas de jouer avec des Brawlers non débloqués en partie amicale, vous ne pourrez jouer qu'avec les Brawlers que vous avez débloqués sur le compte que vous utiliserez pour le tournoi (sachant que vous devez garder le même compte pour l'ensemble du tournoi).
+          </p>
+        </dd>
+
+      </dl>
+    </div>
+  </div>
+</main>
+
+
+
+<footer>
+  <section class="my-3 mw-100 d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <a class="text-dark" href="http://sibyll.in/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-link fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://discord.gg/8tVCZJG" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fab fa-discord fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://t.me/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-telegram-plane fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://twitter.com/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-twitter fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://instagram.com/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-instagram fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://twitch.tv/clicgamestar" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-twitch fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="http://youtube.com/channel/UCXFwVqbBNf4wO3d5CmW3uBg" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fab fa-youtube fa-stack-1x fa-inverse fa-fw"></i> 
+    </span>
+  </a>
+  <a class="text-dark" href="mailto:gamestar.clic@epfl.ch" target="_blank">
+    <span class="fa-stack">
+      <i class="fas fa-circle fa-stack-2x"></i> 
+      <i class="fas fa-envelope fa-stack-1x fa-inverse fa-fw"></i>
+    </span>
+  </a>
+</section>
+</footer>
+
+<script src="../assets/js/jquery-1.12.4.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+
+<script>
+<!-- Information du tour en cours -->
+
+var endDateBase = new Date("2024-05-24 18:30:00");
+var end1 = new Date("2024-05-03 00:00:00");
+var end2 = new Date("2024-05-07 00:00:00");
+var end3 = new Date("2024-05-10 00:00:00");
+var end4 = new Date("2024-05-12 00:00:00");
+var end5 = new Date("2024-05-15 00:00:00");
+var end6 = new Date("2024-05-18 00:00:00");
+var end7 = new Date("2024-05-21 00:00:00");
+var end8 = new Date("2024-05-24 00:00:00");
+
+var endDate = endDateBase.getTime();
+
+var ends = [end1.getTime(), end2.getTime(), end3.getTime(), end4.getTime(), end5.getTime(), end6.getTime(), end7.getTime(), end8.getTime(), endDate];
+
+var reasons = []
+for (var i = 1; i <= 8; i++) {
+  reasons.push("Fin du tour " + i);
+}
+reasons.push("Présentiel");
+
+var gameModes = ["Prime, Brawlball, Razzia de gemmes", "Brawlball, Razzia de gemmes, Hors-jeu", "Razzia de gemmes, Prime, Zone réservée", "Braquage, Brawlball, Hors-jeu", "Zone réservée, Braquage, Prime", "Braquage, Prime, Brawlball", "Hors-jeu, Zone réservée, Braquage", "Razzia de gemmes, Hors-jeu, Zone réservée", "Finale"];
+
+
+var timer = setInterval(function() {
+
+    let now = new Date().getTime();
+    //Find first date in ends that is after now
+    var i = 0;
+    while (i < 8 && ends[i] < now) {
+      i++;
+    }
+    let t = ends[i] - now;
+
+    if (t >= 0) {
+
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        let secs = Math.floor((t % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = "<h3>Temps restant avant "
+         + "<strong>" + reasons[i] + "</strong>" + " : <br> "
+         + days + "<span class='label'> jour(s) </span>"
+         + ("0"+hours).slice(-2) + "<span class='label'>h </span>"
+         + ("0"+mins).slice(-2) + "<span class='label'>min </span>"
+         + ("0"+secs).slice(-2) + "<span class='label'>sec</span>"
+         + "</h3>";
+
+        document.getElementById("game-modes").innerHTML = "<h3>Modes de jeu pour le tour " + (i+1) + " : </br>" + gameModes[i] + "</h3>";
+
+    } else {
+
+
+        document.getElementById("timer").innerHTML = "<h3>Temps restant avant "
+         + "<strong>" + reasons[i] + "</strong>" + " : Temps écoulé !" + "</h3>";
+
+    }
+
+}, 1000);
+</script>
+
+</body>
+</html>
