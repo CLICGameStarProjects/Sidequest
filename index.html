@@ -67,7 +67,7 @@
       <div class="col-lg-6 col-md-12 text-center">
         <h2>Tournoi : Pokémon Showdown </h2>
         <img class="mw-100" src="./assets/img/showdown.png" width="400" />
-        <div id="timer">Modifier tout en bas pour changer le timer !</div>
+        <div id="timer"></div> <!-- Modifier tout en bas pour changer le timer ! -->
         <p>Inscriptions :<br /><strong>Du 01 octobre au 16 octobre à 19h00 </strong><br />(Envoie un message à <a
             href="https://t.me/LaClimSx" target="_blank">@LaClimSx</a> sur Telegram.)</p>
         <p>Qualifications en ligne : <br /><strong>Du 17 octobre à 22h00 au 3 novembre à 23h59</strong></p>
@@ -115,6 +115,7 @@
             élimination pour les 4 meilleur·e·s joueur·euse·s de la poule, cette phase se déroulant en présentiel.</li>
           <li>Tous les matches du tournoi se déroulent en un match de 3 manches maximum (BO3)</li>
           <li>Le tournoi se joue en OverUsed Gen 9.</li>
+          <li>Il est possible de changer d'équipe entre les matches ou entre les manches d'un même match.</li>
         </ul>
         <h3>Nous utiliserons les <a
             href="https://www.smogon.com/forums/threads/official-smogon-tournament-xx-signups.3734061/"
@@ -205,10 +206,10 @@
         <h3>Spécifiques au jeu</h3>
         <dl class="row">
 
-          <dt class="col-sm-3">Est-ce qu’on peut changer d'équipe entre les matches ?</dt>
+          <dt class="col-sm-3">Est-ce que Kyurem est ban ?</dt>
           <dd class="col-sm-9">
             <p>
-              Oui, vous pouvez changer d'équipe entre les matches et même entre chaque manche d'un même match.
+              Tous les Pokémon validés par Showdown en OU Gen 9 sont autorisés. À l'heure actuelle, Kyurem est autorisé même s'il a été question de le bannir dernièrement.
             </p>
           </dd>
 
@@ -272,6 +273,9 @@
     </section>
   </footer>
 
+
+
+
   <script src="./assets/js/jquery-1.12.4.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
 
@@ -297,12 +301,12 @@
       reasons.push("Fin du tour " + i);
     }
     reasons.push(" Présentiel"); var timer = setInterval(function () {
-      let now = new Date().getTime(); if (now <
-        beginFirstPhase) {
-        document.getElementById("timer").innerHTML = "<h3>Le tournoi commence le <strong>" + parseDate(beginFirstPhase) + "</strong> </h3>"; return;
-      } else { 
-        //Find first date in ends that is after now var i=0; while (i < 8 && ends[i] < now) { i++; } let t=ends[i] - now;
-        if (t >= 0) {
+      let now = new Date().getTime(); 
+      if (now < beginFirstPhase) {
+          document.getElementById("timer").innerHTML = "<h3>Le tournoi commence le <strong>" +
+            parseDate(beginFirstPhase) + "</strong> </h3>"; return;
+      } else { //Find first date in ends that is after now var
+        i = 0; while (i < 8 && ends[i] < now) { i++; } let t = ends[i] - now; if (t >= 0) {
 
           let days = Math.floor(t / (1000 * 60 * 60 * 24));
           let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -331,7 +335,7 @@
     function parseDate(date) {
       return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
     }
-    
+
   </script>
 
 </body>
