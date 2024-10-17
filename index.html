@@ -283,21 +283,19 @@
     <!-- Information du tour en cours -->
     var beginFirstPhase = new Date("2024-10-17 00:00:00");
     var endDateBase = new Date("2024-11-04 18:00:00");
-    var end1 = new Date("2024-05-03 00:00:00");
-    var end2 = new Date("2024-05-07 00:00:00");
-    var end3 = new Date("2024-05-10 00:00:00");
-    var end4 = new Date("2024-05-12 00:00:00");
-    var end5 = new Date("2024-05-15 00:00:00");
-    var end6 = new Date("2024-05-18 00:00:00");
-    var end7 = new Date("2024-05-21 00:00:00");
-    var end8 = new Date("2024-11-04 00:00:00");
+    var end1 = new Date("2024-10-20 00:00:00");
+    var end2 = new Date("2024-10-23 00:00:00");
+    var end3 = new Date("2024-10-26 00:00:00");
+    var end4 = new Date("2024-10-29 00:00:00");
+    var end5 = new Date("2024-11-01 00:00:00");
+    var end6 = new Date("2024-11-04 00:00:00");
 
     var endDate = endDateBase.getTime();
 
-    var ends = [end1.getTime(), end2.getTime(), end3.getTime(), end4.getTime(), end5.getTime(), end6.getTime(), end7.getTime(), end8.getTime(), endDate];
+    var ends = [end1.getTime(), end2.getTime(), end3.getTime(), end4.getTime(), end5.getTime(), end6.getTime(), endDate];
 
     var reasons = []
-    for (var i = 1; i <= 8; i++) {
+    for (var i = 1; i < ends.length; i++) {
       reasons.push("Fin du tour " + i);
     }
     reasons.push(" Présentiel"); var timer = setInterval(function () {
